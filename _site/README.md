@@ -1,4 +1,4 @@
-# LunaMagicBeauty.github.io
+# Luna Magic Beauty
 
-[Coming Soon](https://lunamagicbeauty.github.io/)
+[Coming Soon](http://www.lunamagicbeauty.com/)
 
