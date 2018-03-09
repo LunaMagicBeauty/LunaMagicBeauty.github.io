@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Allura|Cormorant+Garamond:400,500,600" rel="stylesheet">
     <style>
       #instafeed img {
         max-width: 100%;
@@ -14,7 +16,7 @@
       .instagram {
         background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, rgba(0, 0, 0, 0) 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, rgba(0, 0, 0, 0)), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
         border-radius: .2em;
-        font-size: 40px;
+        font-size: 2.8em;
         height: 1em;
         position: relative;
         width: 1em;
@@ -39,6 +41,107 @@
         transform: translate(0.3em, 0.3em);
         width: .4em;
       }
+
+      .email {
+        display: inline-flex;
+        position: relative;
+        width: 50px;
+        height: 35px;
+        margin-top: 5px;
+        background-color: black;
+        overflow: hidden;
+      }
+      .email:before, .email:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        margin-left: -25px;
+        height: 50px;
+        width: 50px;
+        background-color: black;
+        transform: rotate(45deg) skew(-5deg, -5deg);
+      }
+      .email:before {
+        bottom: -104%;
+        box-shadow: -3px -3px 0 0 white;
+      }
+      .email:after {
+        top: -104%;
+        box-shadow: 3px 3px 5px 0 white;
+      }
+
+      .spotify {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      .spotify_green {
+        background: #2EBD59;
+      }
+      .spotify .line {
+        position: relative;
+        display: inline-block;
+        height: 12vmin;
+        border-radius: 50%;
+        border: 4px solid transparent;
+        border-top: 5px solid #111;
+        transform: rotate(7.5deg);
+      }
+      .spotify .line:nth-child(1) {
+        top: 32%;
+        width: 78%;
+      }
+      .spotify .line:nth-child(2) {
+        top: 11.5%;
+        left: -.15vmin;
+        width: 64%;
+      }
+      .spotify .line:nth-child(3) {
+        top: -8%;
+        left: -.2vmin;
+        width: 50%;
+      }
+
+      .title, .tagline, .title-copy, .copy {
+        font-family: 'Cormorant Garamond', serif;
+      }
+
+      .subtitle {
+        font-family: 'Allura', cursive;
+        font-size: 3.5em;
+        line-height: 15px;
+        margin-bottom: 1.5rem;
+      }
+
+      .title {
+        font-size: 4em;
+        font-weight: 600;
+        margin: 20px 0 0 0;
+      }
+
+      .title-copy {
+        font-size: 1.3em;
+        font-weight: 500;
+      }
+
+      .copy {
+        font-size: 1em;
+        font-weight: 400;
+      }
+
+      .copy a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .tagline {
+        font-size: 1.55em;
+        font-weight: 500;
+      }
     </style>
 
     <script type="text/javascript" src="/assets/js/instafeed.min.js"></script>
@@ -49,31 +152,49 @@
     <div class="container">
       <div class="row">
         <div class="col text-center">
-          <h2 class="h5">WELCOME TO</h2>
-          <h1 class="display-4">LUNA MAGIC</h1>
-          <h2 class="h4"><em>Beauty</em></h2>
-          <p>
-            BEAUTY WITH A VIBE LAUNCHING THIS FALL
+          <h1 class="title">LUNA MAGIC</h1>
+          <h2 class="subtitle">Beauty</h2>
+          <p class="title-copy">
+            <strong>A BEAUTY REVOLUTION LAUNCHING THIS FALL.</strong>
           </p>
-          <p class="lead">
-            LUNA MAGIC BEAUTY was founded with a mission to redefine the standards of the beauty industry by celebrating self-expression in all forms, shapes and sizes with hint of glitz and glamour. Cruelty-free and made with love in LA, our beauty products are inspired by XXX. Until we launch, get to know us: subscribe to our email list for exclusive updates, follow us on Instagram @lunamagicbeauty, and listen to our Spotify playlist to get a taste of what is to come.
+          <p class="title-copy text-justify border-bottom border-dark pb-4">
+            LUNA MAGIC BEAUTY was founded with a mission to redefine the standards of the beauty industry by celebrating self-expression in all forms, shapes and sizes and a hint of urban-chic glitz and glam. LUNA MAGIC BEAUTY is not a singular face, but a magical attitude embodied by those who posses it, know it and own it. The inspiration for our cruelty-free collection was born in NYC, and made in Los Angeles with love.
           </p>
-          <p>
-            STAY IN TOUCH
+          <p class="tagline">
+            <strong>LET’S STAY IN TOUCH</strong>
           </p>
         </div>
       </div>
-      <div class="row align-items-center">
-        <div class="col">
-          <div class="row">
-            <div class="col-2">
+      <div class="row">
+        <div class="col-sm">
+
+          <div class="row no-gutters">
+            <div class="col-2 offset-1">
+              <div class="email"></div>
+            </div>
+            <div class="col-9 text-center">
+              <p class="copy">
+                GET ON THE LIST
+                <br>
+                <strong>#LUNAMAIL</strong>
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm border-right border-left border-dark">
+
+          <div class="row no-gutters">
+            <div class="col-2 offset-1">
               <div class="instagram"></div>
             </div>
-            <div class="col-10 text-center">
-              <p>
+            <div class="col-9 text-center">
+              <p class="copy">
                 FOLLOW US
                 <br>
-                @LUNAMAGICBEAUTY
+                <a href="https://www.instagram.com/lunamagicbeauty/" target="_blank">
+                  <strong>@LUNAMAGICBEAUTY</strong>
+                </a>
               </p>
             </div>
           </div>
@@ -85,18 +206,33 @@
               get: 'user',
               userId: '7072687496',
               limit: 12,
-              template: '<div class="col-4"><a href="{{link}}"><img src="{{image}}"/></a></div>'
+              template: '<div class="col-4 p-2"><a href="{{link}}" target="_blank"><img src="{{image}}"/></a></div>'
             });
             feed.run();
           </script>
           <div id="instafeed" class="row no-gutters"></div>
+
         </div>
-        <div class="col">
-          <script type="text/javascript" src="https://www.formlets.com/static/js/iframeResizer.min.js"></script>
-          <iframe class="formlets-iframe" src="https://www.formlets.com/forms/KiE17bjqEbQsu7wl/?iframe=true" frameborder="0" width="100%"></iframe>
-          <script type="text/javascript" src="https://www.formlets.com/static/js/iframe.js"></script>
+        <div class="col-sm">
+
+          <div class="row no-gutters">
+            <div class="col-2 offset-1">
+              <div class="spotify spotify_green">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+            <div class="col-9 text-center">
+              <p class="copy">
+                LISTEN TO OUR VIBES
+                <br>
+                <strong>#LUNAMUSIC</strong>
+              </p>
+            </div>
+          </div>
+
         </div>
-        <div class="col"></div>
       </div>
     </div>
 
