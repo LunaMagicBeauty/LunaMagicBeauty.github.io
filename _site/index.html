@@ -197,19 +197,31 @@
             </div>
           </div>
 
-          <form action="">
+          <script type="text/javascript">var submitted=false;</script>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='/?emailSubmitted=true';}"></iframe>
+          <form action="https://docs.google.com/forms/d/e/1FAIpQLSfJCB7eXqy3l97XlM9ANFP2gITRYsvyYikxnD2XhgANvAqMGw/formResponse" method="post" onsubmit="submitted=true;" target="hidden_iframe">
             <p class="copy text-center form mb-5">
               Subscribe to get first-access to our beauty products, limited offers, pop-up shop events—straight to your inbox.
             </p>
-            <div class="form-group">
-              <input type="email" class="form-control rounded-0" id="email" name="email" placeholder="Email">
-            </div>
-            <div class="row">
-              <div class="col text-center">
-                <button type="submit" class="btn btn-primary rounded-0">GET ON THE LIST</button>
+            <div id="form-values" class="text-center copy">
+              <div class="form-group">
+                <input type="email" required class="form-control rounded-0" name="emailAddress" placeholder="Email">
+              </div>
+              <div class="row">
+                <div class="col text-center">
+                  <button type="submit" class="btn btn-primary rounded-0">GET ON THE LIST</button>
+                </div>
               </div>
             </div>
           </form>
+          <script type="text/javascript">
+            var url = window.location.href;
+            var url = new URL(url);
+            var email = url.searchParams.get("emailSubmitted");
+            if (email) {
+              document.getElementById('form-values').innerHTML = "Thank You for Subscribing"
+            }
+          </script>
 
         </div>
         <div class="col-sm border-right border-left border-dark">
