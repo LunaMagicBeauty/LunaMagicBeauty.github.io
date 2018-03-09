@@ -11,6 +11,34 @@
       #instafeed img {
         max-width: 100%;
       }
+      .instagram {
+        background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, rgba(0, 0, 0, 0) 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, rgba(0, 0, 0, 0)), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+        border-radius: .2em;
+        font-size: 40px;
+        height: 1em;
+        position: relative;
+        width: 1em;
+      }
+      .instagram:before, .instagram:after {
+        color: #fff;
+        content: '';
+        display: block;
+        position: absolute;
+        border: .075em solid;
+      }
+      .instagram:before {
+        border-radius: inherit;
+        height: .75em;
+        transform: translate(0.125em, 0.125em);
+        width: .75em;
+      }
+      .instagram:after {
+        border-radius: 1em;
+        box-shadow: .2em -.2em 0 -.16em;
+        height: .4em;
+        transform: translate(0.3em, 0.3em);
+        width: .4em;
+      }
     </style>
 
     <script type="text/javascript" src="/assets/js/instafeed.min.js"></script>
@@ -37,6 +65,18 @@
       </div>
       <div class="row align-items-center">
         <div class="col">
+          <div class="row">
+            <div class="col-2">
+              <div class="instagram"></div>
+            </div>
+            <div class="col-10 text-center">
+              <p>
+                FOLLOW US
+                <br>
+                @LUNAMAGICBEAUTY
+              </p>
+            </div>
+          </div>
           <script type="text/javascript">
             var feed = new Instafeed({
               clientId: '570dbcd4835e4d2fbe920b00d7961ca1',
